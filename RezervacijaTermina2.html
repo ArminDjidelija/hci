@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title href="index.html">eBolnica</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:info@ebolnica.ba">info@ebolnica.ba</a>
+        <i class="bi bi-phone"></i> +387 36 123 123
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">eBolnica</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="Pocetna.html">Pocetna</a></li>
+          <li class="dropdown"><a href=""><span>Termini</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/RezervacijaTermina1.html">Rezervacija</a></li>
+              <li><a href="/Termini.html">Pregled</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="/Nalazi.html">Nalazi</a></li>
+          <li><a class="nav-link scrollto" href="/Kontakt.html">Kontakt</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="/Profil.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Profil</span></a>
+
+    </div>
+  </header>
+
+  <!-- ======= Appointment Section ======= -->
+  <section id="appointment" class="appointment section-bg" id="myForm" action="RezervacijaTermina2.html">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>----------------</h2>
+        <!-- <a href="javascript:window.history.back();"  style="float: left; z-index: 1;"> Nazad</a> -->
+
+        <h2 style=" width: 42%;margin-left: 30%; z-index: 0;">Odaberite datum i detalje o pregledu</h2>
+
+        <!-- <h2>Odaberite datum i detalje o pregledu</h2> -->
+        <p>Prilikom kreiranja rezervacije prvo odaberite datum željenog termina <br>
+          Zatim odaberite željeni vremenski termin u formatu sati:minute <br>
+          Zatim odaberite da li Vam je prvi pregled ili je kontrola <br>
+          Na kraju odaberite da li je pregled hitan ili ne.
+        </p>
+      </div>
+
+
+
+      <section class="step-wizard">
+        <ul class="step-wizard-list">
+          <li class="step-wizard-item ">
+            <span class="progress-count">1</span>
+            <span class="progress-label">Dijagnoza</span>
+          </li>
+          <li class="step-wizard-item current-item">
+            <span class="progress-count">2</span>
+            <span class="progress-label">Odabir termina</span>
+          </li>
+          <li class="step-wizard-item">
+            <span class="progress-count">3</span>
+            <span class="progress-label">Kraj</span>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="php-email-form" id="sekcijaForma">
+        <div class="row">
+          <!-- <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div> -->
+          <!-- <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div> -->
+        </div>
+        <div class="row">
+          <div class="col-md-3 form-group mt-3 pb-0" style="text-align: center;">
+
+            <label for="start">Datum termina</label>
+
+          </div>
+          <div class="col-md-3 form-group mt-3 pb-0" style="text-align: center;">
+
+            <label for="start">Vrijeme termina</label>
+
+          </div>
+
+          <div class="col-md-3 form-group mt-3 pb-0" style="text-align: center;">
+
+            <label for="start">Tip pregleda</label>
+
+          </div>
+
+          <div class="col-md-3 form-group mt-3 pb-0" style="text-align: center;">
+
+            <label for="start">Hitan pregled?</label>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">
+
+            <input type="date" id="datumTermina" name="trip-start" value="2024-01-13" min="2024-01-13"
+              max="2024-04-12" />
+              <div class="warning" id="datumWarning">Niste unijeli dijagnozu</div>
+
+          </div>
+
+
+
+          <!-- <div class="col-md-3 form-group mt-3" style="text-align: center;">
+            <div class="brojSlobodnih" id="obabranTermin1" onclick="odaberiTermin(1)">
+              <span>08:00 - 10:55</span>
+              <p class="brojDostupnih">9 dostupnih termina</p>
+            </div>
+          </div>
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">
+            <div class="brojSlobodnih" id="obabranTermin2" onclick="odaberiTermin(2)">
+              <span>11:00 - 13:55</span>
+              <p class="brojDostupnih"> 6 dostupnih termina</p>
+            </div>
+          </div>
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">
+            <div class="brojSlobodnih" id="obabranTermin3" onclick="odaberiTermin(3)">
+              <span>14:00 - 16:55</span>
+              <p class="brojDostupnih">12 dostupnih termina</p>
+            </div>
+          </div> -->
+
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">
+            <!-- <label for="timePicker">Select Time:</label> -->
+            <select id="vrijemeTerminaSati">
+              <!-- Options for hours -->
+              <option class="optionTime" value=""></option>
+
+              <option class="optionTime" value="08">08</option>
+              <!-- <option class="optionTime" value="09">09</option> -->
+              <option class="optionTime" value="10">10</option>
+              <!-- <option class="optionTime" value="11">11</option> -->
+              <option class="optionTime" value="12">12</option>
+              <!-- <option class="optionTime" value="13">13</option> -->
+              <!-- <option class="optionTime" value="14">14</option> -->
+              <option class="optionTime" value="15">15</option>
+              <option class="optionTime" value="16">16</option>
+            </select>
+
+            <span>:</span>
+
+            <select id="vrijemeTerminaMinute">
+              <!-- Options for minutes with 15-minute intervals -->
+              <option class="optionTime" value=""></option>
+
+              <option class="optionTime" value="00">00</option>
+              <option class="optionTime" value="15">15</option>
+              <option class="optionTime" value="30">30</option>
+              <option class="optionTime" value="45">45</option>
+            </select>
+            <div class="warning" id="vrijemeWarning">Niste unijeli vrijeme termina</div>
+
+          </div>
+
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">           
+              <form action="" id="tipoviPregleda">
+                <input type="radio" id="prviPregled" name="tipPregleda" value="prviPregled" style="width: 15px;"><label for="prviPregled" id="prviPregledcss">Prvi pregled</label>
+                <input type="radio" id="kontrola" name="tipPregleda" value="kontrola" style="width: 15px;"><label for="kontrola">Kontrola</label>          
+              </form>
+              <div class="warning" id="tipPregledaWarning">Niste odabrali tip pregleda</div>
+
+          </div>
+
+          <div class="col-md-3 form-group mt-3" style="text-align: center;">
+            <form action="" id="hitnostiPregleda">
+              <input type="radio" id="hitnostDa" name="hitnost" value="hitnostDa" style="width: 15px;"><label for="hitnostDa" id="prviPregledcss">Da</label>
+              <input type="radio" id="hitnostNe" name="hitnost" value="hitnostNe" style="width: 15px;"><label for="hitnostNe">Ne</label>
+            </form>
+            <div class="warning" id="hitnostiPregledaWarning">Niste odabrali hitnost pregleda</div>
+
+          </div>
+            
+
+
+          <!-- <div class="col-md-4 form-group mt-3">
+            <select name="department" id="department" class="form-select">
+              <option value="">Select Department</option>
+              <option value="Department 1">Department 1</option>
+              <option value="Department 2">Department 2</option>
+              <option value="Department 3">Department 3</option>
+            </select>
+            <div class="validate"></div>
+          </div> -->
+          <!-- <div class="col-md-5 form-group mt-3">
+            <select name="doctor" id="doctor" class="form-select">
+              <option value="">Select Doctor</option>
+              <option value="Doctor 1">Doctor 1</option>
+              <option value="Doctor 2">Doctor 2</option>
+              <option value="Doctor 3">Doctor 3</option>
+            </select>
+            <div class="validate"></div>
+          </div> -->
+        </div>
+        <!-- <div class="form-group mt-3">
+                    
+          <input class="form-control"  rows="1" placeholder="Naslov"></input>                    
+
+        </div>
+        
+        <div class="form-group mt-3">
+          <textarea class="form-control" rows="5" placeholder="Dijagnoza"></textarea>
+        </div> -->
+        <div class="mb-3">
+          <!-- <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
+        </div>
+
+        <a ><button type="submit" onclick="drugiKorakNext()" class="nextBackButton">Dalje</button></a>
+        <a href="RezervacijaTermina1.html"><button type="submit" class="nextBackButton"
+            id="backButton">Nazad</button></a>
+        
+
+      </section>
+
+    </div>
+  </section>
+
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy;  <strong><span>eBolnica</span></strong>2023
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/dodatneFunkcije.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+    <script src="assets/js/dodatneFunkcije.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
