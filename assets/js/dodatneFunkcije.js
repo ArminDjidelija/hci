@@ -383,6 +383,7 @@ function ponistiDijagnozu(){
     naslov.value="";
     dijagnoza.value="";
     lijekovi.value="";
+    ugasiPopupDijagnoza();
 }
 function potvrdiDijagnozu(){
     var naslov=document.getElementById("naslovPopup");
@@ -404,7 +405,7 @@ function potvrdiDijagnozu(){
         document.getElementById("dijagnozaPopupWarning").style.display="none";
     }
     if(lijekovi.value.trim()===""){
-        document.getElementById("lijekoviPopupWarning").style.display="block";
+        //document.getElementById("lijekoviPopupWarning").style.display="block";
     }
     else{
         document.getElementById("lijekoviPopupWarning").style.display="none";
@@ -712,6 +713,7 @@ function decrementHeight() {
 }
 
 function incrementWeight() {
+  console.log("aaaaaaaaaaaaa");
   var weightInput = document.getElementById('weight');
   weightInput.value = (parseFloat(weightInput.value) + 0.1).toFixed(1);
 }
@@ -743,57 +745,59 @@ function uvecajDatum(){
   currentDate.setDate(currentDate.getDate() + 1);
   document.getElementById('datumTermina2').value = currentDate.toISOString().split('T')[0];
 }
+var trenutno=0;
 
-var nizDana = {
-  "2024-02-08": {
-    height: 180,
-    weight: 94.6,
-    BMI: 23.4,
-    bloodPressure: "120/80"
-  },
-  "2024-02-09": {
-    height: 180,
-    weight: 94.5,
-    BMI: 23.3,
-    bloodPressure: "118/78"
-  },
-  "2024-02-10": {
-    height: 180,
-    weight: 94.4,
-    BMI: 23.1,
-    bloodPressure: "122/82"
-  },
-  "2024-02-11": {
-    height: 180,
-    weight: 94.3,
-    BMI: 22,
-    bloodPressure: "125/85"
-  },
-  "2024-02-12": {
-    height: 180,
-    weight: 94.2,
-    BMI: 22,
-    bloodPressure: "116/76"
-  },
-  "2024-02-13": {
-    height: 180,
-    weight: 94.2,
-    BMI: 22,
-    bloodPressure: "128/88"
-  },
-  "2024-02-14": {
-    height: 179.9,
-    weight: 94.3,
-    BMI: 22,
-    bloodPressure: "124/84"
-  }
-  // Add more data for different days as needed
-};
 
 // Function to update form data based on selected date
 function updateFormData() {
+  var nizDana = {
+    "2024-02-08": {
+      height: 180,
+      weight: 94.6,
+      BMI: 23.4,
+      bloodPressure: "120/80"
+    },
+    "2024-02-09": {
+      height: 180,
+      weight: 94.5,
+      BMI: 23.3,
+      bloodPressure: "118/78"
+    },
+    "2024-02-10": {
+      height: 180,
+      weight: 94.4,
+      BMI: 23.1,
+      bloodPressure: "122/82"
+    },
+    "2024-02-11": {
+      height: 180,
+      weight: 94.3,
+      BMI: 22,
+      bloodPressure: "125/85"
+    },
+    "2024-02-12": {
+      height: 180,
+      weight: 94.2,
+      BMI: 22,
+      bloodPressure: "116/76"
+    },
+    "2024-02-13": {
+      height: 180,
+      weight: 94.2,
+      BMI: 22,
+      bloodPressure: "128/88"
+    },
+    "2024-02-14": {
+      height: 179.9,
+      weight: 94.3,
+      BMI: 22,
+      bloodPressure: "124/84"
+    }
+    // Add more data for different days as needed
+  };
   var selectedDate = document.getElementById("datumTermina2").value;
   console.log(selectedDate);
+  //console.log(nizDana);
   var selectedData = nizDana[selectedDate];
   console.log(selectedData);
   if (selectedData) {
@@ -808,7 +812,7 @@ function updateFormData() {
     document.getElementById("BMI").value = "";
     document.getElementById("bloodPressure").value = "";
   }
-}
+};
 
 // var filterInput = document.getElementById('Filter');
 // console.log(filterInput);
@@ -834,30 +838,6 @@ function updateFormData() {
 //         });
 //     });
 
-// Get the filter input element
-var filterInput = document.getElementById('Filter');
-
-// Add event listener to filter input
-filterInput.addEventListener('input', function () {
-    // Get the filter value
-    var filterValue = this.value.toLowerCase();
-
-    // Get all table rows
-    var rows = document.querySelectorAll('.table tbody tr');
-
-    // Loop through each row
-    rows.forEach(function (row) {
-        // Get the content of the second column (Description) by ID
-        var description = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
-
-        // Check if the filter value is contained in the description
-        if (description.includes(filterValue)) {
-            row.style.display = ''; // Show the row
-        } else {
-            row.style.display = 'none'; // Hide the row
-        }
-    });
-});
 
 
 

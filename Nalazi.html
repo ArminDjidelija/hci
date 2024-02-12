@@ -116,7 +116,7 @@
               <!-- Tab Content -->
               <div class="tab-content pt-4">
                 <div>Filter podataka</div>
-                <input type="text" id="Filter" placeholder="Search">
+                <input type="text" id="Filter" placeholder="Search" onchange="inputChange()">
                 <!-- Medical Records Tab -->
                   <div class="card card-table mb-0">
                     <div class="card-body">
@@ -227,6 +227,35 @@
       <!-- Bootstrap Core JS -->
 
       <script src="assets/js/bootstrap.min.js"></script>
+
+
+      <script>
+        // Get the filter input element
+        var filterInput = document.getElementById('Filter');
+
+        // Add event listener to filter input
+        filterInput.addEventListener('input', function () {
+            // Get the filter value
+            var filterValue = this.value.toLowerCase();
+
+            // Get all table rows
+            var rows = document.querySelectorAll('.table tbody tr');
+
+            // Loop through each row
+            rows.forEach(function (row) {
+                // Get the content of the second column (Description) by ID
+                var description = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+                // Check if the filter value is contained in the description
+                if (description.includes(filterValue)) {
+                    row.style.display = ''; // Show the row
+                } else {
+                    row.style.display = 'none'; // Hide the row
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
