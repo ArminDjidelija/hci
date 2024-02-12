@@ -32,6 +32,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/armin.css" rel="stylesheet">
 
 
 </head>
@@ -288,7 +289,7 @@
         </div>
 
         <a><button type="submit" onclick="potvrdiRezervaciju()" class="nextBackButton">Potvrdi</button></a>
-        <a><button type="submit" onclick="resetuj2()" class="nextBackButton" style="background-color: #66a1d4;">Poništi</button></a>
+        <a><button type="submit" onclick="resetujRezervaciju()" class="nextBackButton" style="background-color: #66a1d4;">Poništi</button></a>
         <a ><button onclick="history.back();" type="submit" class="nextBackButton"
             id="backButton">Nazad</button></a>
 
@@ -306,24 +307,19 @@
                     <a href="Termini.html"><button type="submit" id="btnDetalji" class="nextBackButton"
                       style="padding-bottom: 2px;padding-top: 2px;border: 2px solid rgba(0, 0, 255,1); " onclick="ugasiPopup2()">Potvrdi</button></a>
               </div>
-            <!-- <div class="form">
-              <h4>Detalji o dijagnozi (<a href="">Ime prezime</a>)</h4>
-              <div class="form-element">
-                <label for="email" style="font-size: small;">Naslov</label>
-                <input type="text" style="font-size: small;" placeholder="Naslov">
-              </div>
-              <div class="form-element">
-                <label for="email" style="font-size: small;">Opis</label>
-                <textarea type="text" rows="5" style="font-size: small;" placeholder="Opis problema"></textarea>
-              </div>
-              <div class="form-element">
-                <label for="email" style="font-size: small;">Zadnja dijagnoza pacijenta</label>
-                <textarea type="text" rows="5" style="font-size: small;" placeholder="Zadnja dijagnoza"></textarea>
-              </div>
-            </div> -->
           </div>
 
-
+          <div class="popup" id="popupInfo3" style="width: 40%;">
+            <div class="close-btn" onclick="ugasiPopup3()">&times;</div>
+            <h4 style="margin-bottom: 30px;">Jeste li sigurni da želite poništiti rezervaciju?</h2>
+              <div>
+               
+                <a ><button type="submit" id="btnDetalji" class="nextBackButton" 
+                    style="padding-bottom: 2px;padding-top: 2px; background-color: white; color: blue; border: 1px solid rgba(0, 0, 255, 0.507);" onclick="poništiRezervaciju()">Poništi</button></a>
+                    <a href="Termini.html"><button type="submit" id="btnDetalji" class="nextBackButton"
+                      style="padding-bottom: 2px;padding-top: 2px;border: 2px solid rgba(0, 0, 255,1); " onclick="resetuj2()">Potvrdi</button></a>
+              </div>
+          </div>
 
     </div>
   </section>
@@ -360,6 +356,7 @@
   <script src="assets/js/dodatneFunkcije.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/armin.js"></script>
 
 
 </body>

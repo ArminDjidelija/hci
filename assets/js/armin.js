@@ -215,3 +215,18 @@ function resetujDrugiKorak() {
     //window.location.href = "Pocetna.html";
 
 }
+
+function resetujRezervaciju(){
+    upaliPrompt();
+}
+
+function upaliPrompt(){
+    document.getElementById("popupInfo3").style.display = "block";
+    // document.getElementById("header").style.opacity = "0";
+    // document.getElementById("header").style.display = "none";
+  
+    document.getElementById("popupInfo3").style.opacity = "1";}
+function ugasiPopup3(){
+    document.getElementById("popupInfo3").style.display="none";
+}
+

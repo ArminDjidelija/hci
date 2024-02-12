@@ -286,7 +286,7 @@ function potvrdiRezervaciju() {
     }
     else{
       resetuj();
-      window.location.href = "Termini.html";
+      window.location.href = "Pocetna.html";
     }
     
 }
