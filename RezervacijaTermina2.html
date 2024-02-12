@@ -57,7 +57,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">eBolnica</a></h1>
+      <h1 class="logo me-auto"><a href="Pocetna.html">eBolnica</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -161,8 +161,8 @@
         <div class="row">
           <div class="col-md-3 form-group mt-3" style="text-align: center;">
 
-            <input type="date" id="datumTermina" name="trip-start" value="2024-01-13" min="2024-01-13"
-              max="2024-04-12" />
+            <input type="date" id="datumTermina" name="trip-start" value="2024-02-12" min="2024-02-12"
+              max="2024-06-12" />
               <div class="warning" id="datumWarning">Niste unijeli dijagnozu</div>
 
           </div>
@@ -201,7 +201,6 @@
               <option class="optionTime" value="12">12</option>
               <!-- <option class="optionTime" value="13">13</option> -->
               <!-- <option class="optionTime" value="14">14</option> -->
-              <option class="optionTime" value="15">15</option>
               <option class="optionTime" value="16">16</option>
             </select>
 
@@ -211,9 +210,9 @@
               <!-- Options for minutes with 15-minute intervals -->
               <option class="optionTime" value=""></option>
 
-              <option class="optionTime" value="00">00</option>
+              <!-- <option class="optionTime" value="00">00</option> -->
               <option class="optionTime" value="15">15</option>
-              <option class="optionTime" value="30">30</option>
+              <!-- <option class="optionTime" value="30">30</option> -->
               <option class="optionTime" value="45">45</option>
             </select>
             <div class="warning" id="vrijemeWarning">Niste unijeli vrijeme termina</div>
@@ -274,9 +273,15 @@
           <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div> -->
         </div>
 
-        <a ><button type="submit" onclick="drugiKorakNext()" class="nextBackButton">Dalje</button></a>
-        <a href="RezervacijaTermina1.html"><button type="submit" class="nextBackButton"
+        <a><button type="submit" onclick="drugiKorakNext()" class="nextBackButton">Dalje</button></a>
+        <a><button type="submit" onclick="resetujDrugiKorak()" class="nextBackButton" style="background-color: #66a1d4;">Poništi</button></a>
+        <a ><button onclick="history.back();" type="submit" class="nextBackButton"
             id="backButton">Nazad</button></a>
+
+
+        <!-- <a ><button type="submit" onclick="drugiKorakNext()" class="nextBackButton">Dalje</button></a>
+        <a href="RezervacijaTermina1.html"><button type="submit" class="nextBackButton"
+            id="backButton">Nazad</button></a> -->
         
 
       </section>
@@ -316,6 +321,7 @@
     <script src="assets/js/dodatneFunkcije.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/armin.js"></script>
 
 
 </body>

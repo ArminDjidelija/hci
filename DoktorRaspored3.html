@@ -33,7 +33,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+ 
 </head>
 
 <body>
@@ -64,8 +64,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="DoktorRaspored1.html">Dnevni raspored</a></li>
-          <li><a class="nav-link scrollto" href="PrethodniPregledi1.html">Prethodni pregledi</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#about">Termini</a></li>
+          <li><a class="nav-link scrollto" href="PrethodniPregledi1.html">Prethodni pregledi</a></li>          <!-- <li><a class="nav-link scrollto" href="#about">Termini</a></li>
           <li><a class="nav-link scrollto" href="#services">Osoblje</a></li>
           <li><a class="nav-link scrollto" href="#departments">Ustanove</a></li> -->
           <li><a class="nav-link scrollto" href="Kontakt.html">Kontakt</a></li>
@@ -91,12 +90,12 @@
       / Pocetna / Dnevni raspored
     </div>
     <hr width="86%" style="margin-left: 7%;">
+
     <div class="container">
       <div style="margin-bottom: 25px;">
-        <label for="" style="font-size: large;margin-bottom: 5px;">Pregledi za dan 12.2.2024.</label>
-        <a href="DoktorRaspored2.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći
-            dan</button></a>
-        <!-- <a><button type="submit" class="nextBackButton" id="btnDetalji">Nazad</button></a> -->
+        <label for="" style="font-size: large;margin-bottom: 5px;" id="buttongore">Pregledi za dan 14.2.2024.</label>
+        <a href="DoktorRaspored3.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći dan</button></a>
+        <a href="DoktorRaspored2.html"><button type="submit" class="nextBackButton" id="btnDetalji">Prethodni dan</button></a>
       </div>
       <table class="table table-striped" id="pregledi">
         <thead>
@@ -107,7 +106,6 @@
             <th scope="col">Hitan pregled</th>
             <th scope="col">Pregledan</th>
             <th scope="col">Akcije</th>
-
           </tr>
         </thead>
         <tbody id="tabelaPregledi">
@@ -305,11 +303,11 @@
         </tbody>
       </table>
 
-      <div style="margin-bottom: 25px;">
-        <a href="DoktorRaspored2.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći
-            dan</button></a>
-        <!-- <a><button type="submit" class="nextBackButton" id="btnDetalji">Nazad</button></a> -->
+      <div style="margin-bottom: 25px;" id="buttondole">
+        <a href="DoktorRaspored3.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći dan</button></a>
+        <a href="DoktorRaspored2.html"><button type="submit" class="nextBackButton" id="btnDetalji">Prethodni dan</button></a>
       </div>
+
       <div class="popup" id="popupInfo">
         <div class="close-btn" onclick="ugasiPopup()">&times;</div>
         <div class="form">
@@ -342,41 +340,36 @@
         <div class="form">
           <h4>Napiši dijagnozu</h4>
           <div class="form-element">
-            <label for="email" style="font-size: small;">Naslov</label>
-            <input type="text" style="font-size: small;" id="naslovPopup" placeholder="Naslov">
-            <div class="warning" id="naslovPopupWarning">Niste unijeli naslov</div>
+            <label for="naslov" style="font-size: small;">Naslov</label>
+            <input type="text" id="naslov" style="font-size: small;" placeholder="Naslov">
           </div>
           <div class="form-element">
             <label for="email" style="font-size: small;">Dijagnoza</label>
-            <textarea type="text" rows="5" id="dijagnozaPopup" placeholder="Dijagnoza"
-              style="font-size: small;"></textarea>
-            <div class="warning" id="dijagnozaPopupWarning">Niste unijeli dijagnozu</div>
+            <textarea type="text" rows="5" placeholder="Dijagnoza" style="font-size: small;"></textarea>
           </div>
           <div class="form-element">
             <div class="row">
               <div class="col-md-8">
                 <label for="email" style="font-size: small;">Lijekovi</label>
-                <textarea type="text" rows="5" style="font-size: small;" id="lijekoviPopup"
-                  placeholder="Lijekovi"></textarea>
-                <div class="warning" id="lijekoviPopupWarning">Niste unijeli lijekove</div>
+                <textarea type="text" rows="5" style="font-size: small;" placeholder="Lijekovi"></textarea>
               </div>
               <div class="col-md-4">
-
+                
                 <div class="mt-4">
-                  <input type="checkbox" name="ponovniDolazak" id="ponovniDolazak"><label for=""
-                    style="font-size: small;"> Ponovni dolazak potreban?</label>
+                  <input type="checkbox" name="ponovniDolazak" id="ponovniDolazak"><label for="ponovniDolazak"
+                style="font-size: small;"> Ponovni dolazak potreban?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
-                    style="font-size: small;"> Uraditi nalaze?</label>
+                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for="uraditiNalaze"
+                style="font-size: small;"> Uraditi nalaze?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
-                    style="font-size: small;"> CT snimak?</label>
+                  <input type="checkbox" name="ponovniDolazak" id="ctsnimak"><label for="ctsnimak"
+                style="font-size: small;"> CT snimak?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
-                    style="font-size: small;"> MR snimak?</label>
+                  <input type="checkbox" name="ponovniDolazak" id="ponovnidolazak"><label for="ponovnidolazak"
+                style="font-size: small;"> MR snimak?</label>
                 </div>
                 <div>
                   <a><button type="submit" id="btnDetalji" class="nextBackButton"
@@ -389,7 +382,7 @@
             </div>
 
           </div>
-
+          
         </div>
       </div>
 
@@ -406,7 +399,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; <strong><span>eBolnica</span></strong>2023
+          &copy;  <strong><span>eBolnica</span></strong>2023
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

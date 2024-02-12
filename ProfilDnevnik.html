@@ -33,7 +33,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
- 
+  
 </head>
 
 <body>
@@ -67,10 +67,10 @@
           <li class="dropdown"><a href=""><span>Termini</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/RezervacijaTermina1.html">Rezervacija</a></li>
-              <li><a href="/Termini.html">Pregled</a></li>
+              <li><a href="/Termini.html">Prijašnji pregledi</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto active" href="/Nalazi.html">Nalazi</a></li>
+          <li><a class="nav-link scrollto" href="/Nalazi.html">Nalazi</a></li>
           <li><a class="nav-link scrollto" href="/Kontakt.html">Kontakt</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -83,103 +83,96 @@
 
   <!-- ======= Appointment Section ======= -->
   <section id="appointment" class="appointment section-bg" id="myForm" action="RezervacijaTermina2.html">
-    
     <div class="container">
 
       <div class="section-title">
         <h2>--</h2>
-        <h2>Pregled nalaza</h2>
+        <h2>Pregled profila</h2>
+        <nav class="nav justify-content-center">
+          <a class="nav-link active" href="Profil.html">Lični podaci</a>
+          <a class="nav-link" href="ProfilDnevnik.html">Dnevnik</a>
+
+        </nav>
       </div>
+      
     </div>
-   
+    
     
   <!-- Page Content -->
-  <div class="content" style="margin-left: 20%;">
+  <div class="content" style="margin-left: 39%;">
     <div class="container-fluid">
 
-      <div class="row">
-        <div class="col-md-7 col-lg-8 col-xl-9">
-          <div class="card">
-            <div class="card-body pt-0">
-            
-              <!-- Tab Menu -->
-              <!-- <nav  class="user-tabs mb-4">
-                <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="#pat_medical_records" data-toggle="tab"><span class="med-records">Medicinski nalazi</span></a>
-                  </li>
-                </ul>
-              </nav> -->
-              <!-- /Tab Menu -->
-              
-              <!-- Tab Content -->
-              <div class="tab-content pt-4">
-                <div>Filter podataka</div>
-                <input type="text" id="Filter" placeholder="Search">
-                <!-- Medical Records Tab -->
-                  <div class="card card-table mb-0">
-                    <div class="card-body">
-                      <div class="table-responsive">
-                        <table class="table table-hover table-center mb-0">
-                          <thead>
-                            <tr>
-                              <th>ID</th>
-                              <th>Opis</th>
-                              <th>Prilog</th>
-                              <th>Dijagnoza</th>
-                            </tr>     
-                          </thead>
-                          <tbody>
-                            <tr id="row1">
-                              <td>ID-205</td>
-                              <td>Upalni proces grla</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Grlobolja</td>
-                            </tr>
-                            <tr id="row2">
-                              <td>ID-206</td>
-                              <td>Prehlada i kašalj</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Kijavica i kašalj</td>
-                            </tr>
-                            <tr id="row3">
-                              <td>ID-207</td>
-                              <td>Upala sinusa</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Bol u sinusima</td>
-                            </tr>
-                            <tr id="row4">
-                              <td>ID-208</td>
-                              <td>Bakterijska infekcija uha</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Bol u uhu</td>
-                            </tr>
-                            <tr id="row5">
-                              <td>ID-209</td>
-                              <td>Infekcija mokraćnih puteva</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Bol prilikom mokrenja</td>
-                            </tr>
-                            <tr id="row6">
-                              <td>ID-210</td>
-                              <td>Gastrointestinalna infekcija</td>
-                              <td><a href="Nalaz.pdf">Dokument</a></td>
-                              <td>Povraćanje i proliv</td>
-                            </tr>
-                          </tbody>
-                        </table>
+     <!-- Page Content -->
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+					
+						<div class="col-md-5 col-lg-4 col-xl-4">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="form-group">
+                        <label for="date">Datum</label>
+                        <div class="input-group">
+                          <button style="border: 0; background: none; margin-right: auto;" onclick="umanjiDatum(); updateFormData()"><i class="bi bi-chevron-left"></i></button>
+                          <input type="date" id="datumTermina2" name="trip-start" onchange="updateFormData()"  value="2024-02-12"  />
+                          <button style="border: 0; background: none; margin-left: auto;" onclick="uvecajDatum(); updateFormData()"><i class="bi bi-chevron-right"></i></button>
+                        </div>
                       </div>
-                    </div>
-                </div>
-                <!-- /Medical Records Tab -->
+                      <!-- Profile Settings Form -->
+                      <form>
+                          <div class="row form-row">
+                              <div class="col-6 col-md-12">
+                                  <div class="form-group">
+                                      <label for="height">Visina</label>
+                                      <div class="input-group">
+                                          <input type="text" id="height" class="form-control" value="180">
+                                          <div class="input-group-append">
+                                              <button class="btn btn-outline-secondary" type="button" onclick="incrementHeight()"  >+</button>
+                                              <button class="btn btn-outline-secondary" type="button" onclick="decrementHeight()">-</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="weight">Tezina</label>
+                                      <div class="input-group">
+                                          <input type="text" id="weight" class="form-control" value="90">
+                                          <div class="input-group-append">
+                                              <button class="btn btn-outline-secondary" type="button" onclick="incrementWeight()">+</button>
+                                              <button class="btn btn-outline-secondary" type="button" onclick="decrementWeight()">-</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="BMI">BMI</label>
+                                    <div class="input-group">
+                                        <input type="text" id="BMI" class="form-control" value="25" >
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button" onclick="incrementBMI()">+</button>
+                                            <button class="btn btn-outline-secondary" type="button" onclick="decrementBMI()">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                  <div class="form-group">
+                                      <label for="bloodPressure">Krvni tlak</label>
+                                      <input type="text" id="bloodPressure" class="form-control" value="120/80">
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-12">
+                                  <div class="form-group" style="margin-top: 4.5%;">
+                                      <button type="button" class="btn btn-primary" id="saveButton">Sacuvaj</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                      <!-- /Profile Settings Form -->
+                  </div>
               </div>
-              <!-- Tab Content -->
-              
-            </div>
           </div>
-        </div>
-      </div>
+					</div>
+				</div>
+
+			</div>		
+			<!-- /Page Content -->
 
     </div>
 

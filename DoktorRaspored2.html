@@ -63,8 +63,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="DoktorRaspored2.html">Pocetna</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#about">Termini</a></li>
+          <li><a class="nav-link scrollto active" href="DoktorRaspored1.html">Dnevni raspored</a></li>
+          <li><a class="nav-link scrollto" href="PrethodniPregledi1.html">Prethodni pregledi</a></li>          <!-- <li><a class="nav-link scrollto" href="#about">Termini</a></li>
           <li><a class="nav-link scrollto" href="#services">Osoblje</a></li>
           <li><a class="nav-link scrollto" href="#departments">Ustanove</a></li> -->
           <li><a class="nav-link scrollto" href="Kontakt.html">Kontakt</a></li>
@@ -81,7 +81,12 @@
 
 
   <section id="appointment" class="appointment section-bg" id="myForm" action="RezervacijaTermina2.html"
-    style="margin-top: 110px;">
+    style="margin-top: 110px;margin-top: 70px;">
+    <button onclick="history.back();" type="submit" style="margin-left: 112px;margin-bottom: 20px;background-color: white;color: #1977cc;border: 1px solid blue; border-radius: 20px;padding: 5px;">
+      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+
+      Nazad
+    </button>
     <div style="margin-left: 112px; margin-bottom: 5px;">
       / Pocetna / Dnevni raspored
     </div>
@@ -89,8 +94,8 @@
 
     <div class="container">
       <div style="margin-bottom: 25px;">
-        <label for="" style="font-size: large;margin-bottom: 5px;">Pregledi za dan 14.1.2024.</label>
-        <a href="DoktorRaspored2.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći dan</button></a>
+        <label for="" style="font-size: large;margin-bottom: 5px;" id="buttongore">Pregledi za dan 13.2.2024.</label>
+        <a href="DoktorRaspored3.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći dan</button></a>
         <a href="DoktorRaspored1.html"><button type="submit" class="nextBackButton" id="btnDetalji">Prethodni dan</button></a>
       </div>
       <table class="table table-striped" id="pregledi">
@@ -104,15 +109,17 @@
             <th scope="col">Akcije</th>
           </tr>
         </thead>
-        <tbody>
-          <tr id="prviRed">
+        <tbody id="tabelaPregledi">
+          <tr id="prviRed" >
             <td scope="row"><img src="assets/img/patients/patient1.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Sadžida
+                Džiho</a></td>
             <td class="align-middle">08:00</td>
             <td class="align-middle">Kontrola</td>
             <td class="align-middle">Ne</td>
-            <td class="align-middle" ><div id="prviNe">Ne</div></td>
+            <td class="align-middle">
+              <div id="prviNe">Ne</div>
+            </td>
 
             <td id="show-login" class="align-middle">
               <button href="#" class="btn btn-sm bg-info-light" id="btnDetalji" data-toggle="modal"
@@ -128,8 +135,8 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient2.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ensar
+                Čevra</a></td>
             <td class="align-middle">08:15</td>
             <td class="align-middle">Kontrola</td>
             <td class="align-middle">Ne</td>
@@ -149,10 +156,10 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient3.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Adnan
+                Humačkić</a></td>
             <td class="align-middle">08:30</td>
-            <td class="align-middle">Kontrola</td>
+            <td class="align-middle">Prvi pregled</td>
             <td class="align-middle">Ne</td>
             <td class="align-middle">Ne</td>
 
@@ -170,8 +177,8 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient4.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Armina
+                Kukrica</a></td>
             <td class="align-middle">08:45</td>
             <td class="align-middle">Kontrola</td>
             <td class="align-middle">Ne</td>
@@ -191,8 +198,8 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient5.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Hana
+                Kovačević</a></td>
             <td class="align-middle">09:00</td>
             <td class="align-middle">Kontrola</td>
             <td class="align-middle">Ne</td>
@@ -212,10 +219,10 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient7.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Najla
+                Kevelj</a></td>
             <td class="align-middle">09:15</td>
-            <td class="align-middle">Kontrola</td>
+            <td class="align-middle">Prvi pregled</td>
             <td class="align-middle">Ne</td>
             <td class="align-middle">Ne</td>
 
@@ -233,10 +240,10 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient1.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Elmedina
+                Mahinić</a></td>
             <td class="align-middle">09:30</td>
-            <td class="align-middle">Kontrola</td>
+            <td class="align-middle">Prvi pregled</td>
             <td class="align-middle">Ne</td>
             <td class="align-middle">Ne</td>
 
@@ -254,8 +261,8 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient2.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"> <a href="" style="color: black;">Omar
+                Čolakhodžić</a></td>
             <td class="align-middle">09:45</td>
             <td class="align-middle">Kontrola</td>
             <td class="align-middle">Ne</td>
@@ -275,10 +282,10 @@
           </tr>
           <tr>
             <td scope="row"><img src="assets/img/patients/patient3.jpg" alt=""
-                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Ime
-                prezime</a></td>
+                style="height: 50px; border-radius: 50%; margin-right: 5px;"><a href="" style="color: black;">Zaim
+                Mehić</a></td>
             <td class="align-middle">10:00</td>
-            <td class="align-middle">Kontrola</td>
+            <td class="align-middle">Prvi pregled</td>
             <td class="align-middle">Ne</td>
             <td class="align-middle">Ne</td>
 
@@ -297,22 +304,34 @@
         </tbody>
       </table>
 
+      <div style="margin-bottom: 25px;" id="buttondole">
+        <a href="DoktorRaspored3.html"><button type="submit" id="btnDetalji" class="nextBackButton">Sljedeći dan</button></a>
+        <a href="DoktorRaspored1.html"><button type="submit" class="nextBackButton" id="btnDetalji">Prethodni dan</button></a>
+      </div>
 
       <div class="popup" id="popupInfo">
         <div class="close-btn" onclick="ugasiPopup()">&times;</div>
         <div class="form">
-          <h4>Detalji o dijagnozi <a href="Profil.html">Ime prezime</a></h4>
+          <h4>Detalji o dijagnozi (<a href="Profil.html">Ensar Čevra</a>)</h4>
           <div class="form-element">
             <label for="email" style="font-size: small;">Naslov</label>
-            <input type="text" style="font-size: small;" placeholder="Naslov">
+            <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Bol u koljenu</p>
+            <!-- <input type="text" style="font-size: small;" placeholder="Bol u koljenu"> -->
           </div>
           <div class="form-element">
             <label for="email" style="font-size: small;">Opis</label>
-            <textarea type="text" rows="5" style="font-size: small;" placeholder="Opis problema"></textarea>
+            <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Osjećam oštru bol u desnom koljenu svaki put kad pokušam saviti ili opteretiti nogu. Bol se javlja s vremena na vrijeme, ali postaje intenzivnija kada pokušavam hodati ili se penjati stepenicama. Primijetio/la sam da je bol počela prije nekoliko sedmica i postaje sve češća. Nema posebnog okidača koji bih mogao/la identificirati, ali osjećam nelagodu čak i kad mirujem. Molim vas za pregled i savjet kako dalje postupiti.</p>
+
+            <!-- <textarea type="text" rows="5" style="font-size: small;"
+              placeholder="Bol u koljenu prilikom savijanja noge i tokom hodanja"></textarea> -->
           </div>
           <div class="form-element">
             <label for="email" style="font-size: small;">Zadnja dijagnoza pacijenta</label>
-            <textarea type="text" rows="5" style="font-size: small;" placeholder="Zadnja dijagnoza"></textarea>
+            <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Pacijent osjeća bol u prednjem dijelu koljena, što sugerira patelofemoralni sindrom. Tijekom pregleda primijetio sam povećan pritisak između patele i femura. Preporučujem fizikalnu terapiju za jačanje mišića oko koljena i nošenje ortopedskih uložaka za podršku pravilnoj poravnanosti patele. Ako simptomi ne poboljšaju, razmotrit ćemo daljnje opcije liječenja, uključujući hirurške zahvate. Molim pacijenta da prati preporuke za terapiju i redovno se javlja.</p>
+
+            
+            <!-- <textarea type="text" rows="5" style="font-size: small;"
+              placeholder="Pacijent imao operaciju prednjeg križnog ligamenta, prepisani lijekovi"></textarea> -->
           </div>
         </div>
       </div>
@@ -322,8 +341,8 @@
         <div class="form">
           <h4>Napiši dijagnozu</h4>
           <div class="form-element">
-            <label for="email" style="font-size: small;">Naslov</label>
-            <input type="text" style="font-size: small;" placeholder="Naslov">
+            <label for="naslov" style="font-size: small;">Naslov</label>
+            <input type="text" id="naslov" style="font-size: small;" placeholder="Naslov">
           </div>
           <div class="form-element">
             <label for="email" style="font-size: small;">Dijagnoza</label>
@@ -338,20 +357,27 @@
               <div class="col-md-4">
                 
                 <div class="mt-4">
-                  <input type="checkbox" name="ponovniDolazak" id="ponovniDolazak"><label for=""
+                  <input type="checkbox" name="ponovniDolazak" id="ponovniDolazak"><label for="ponovniDolazak"
                 style="font-size: small;"> Ponovni dolazak potreban?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
+                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for="uraditiNalaze"
                 style="font-size: small;"> Uraditi nalaze?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
+                  <input type="checkbox" name="ponovniDolazak" id="ctsnimak"><label for="ctsnimak"
                 style="font-size: small;"> CT snimak?</label>
                 </div>
                 <div>
-                  <input type="checkbox" name="ponovniDolazak" id="uraditiNalaze"><label for=""
+                  <input type="checkbox" name="ponovniDolazak" id="ponovnidolazak"><label for="ponovnidolazak"
                 style="font-size: small;"> MR snimak?</label>
+                </div>
+                <div>
+                  <a><button type="submit" id="btnDetalji" class="nextBackButton"
+                    style="padding-bottom: 2px;padding-top: 2px;" onclick="potvrdiDijagnozu()">Potvrdi</button></a>
+                  <a><button type="submit" id="btnDetalji" class="nextBackButton"
+                      style="padding-bottom: 2px;padding-top: 2px;" onclick="ponistiDijagnozu()">Poništi</button></a>
+
                 </div>
               </div>
             </div>
