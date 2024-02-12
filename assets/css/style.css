@@ -565,7 +565,7 @@ section {
   position: relative;
   color: #2c4964;
 }
-
+/* 
 .section-title h2::before {
   content: "";
   position: absolute;
@@ -587,10 +587,10 @@ section {
   bottom: 0;
   left: calc(50% - 20px);
 }
-
+*/
 .section-title p {
   margin-bottom: 0;
-}
+} 
 
 /*--------------------------------------------------------------
 # Breadcrumbs
