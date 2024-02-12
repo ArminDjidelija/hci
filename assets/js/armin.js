@@ -70,8 +70,18 @@ function login() {
 
         document.getElementById("passwordWarning2").style.display = "none";
 
-        window.location.href = "Pocetna.html";
-
+        if(email==="pacijent@ebolnica.ba"){
+            window.location.href = "PocetnaPacijent.html";
+        }
+        else if(email==="doktor@ebolnica.ba"){
+            window.location.href = "PocetnaDoktor.html";
+        }
+        else if(email==="apotekar@ebolnica.ba"){
+            window.location.href = "PocetnaApotekar.html";
+        }
+        else{
+            window.location.href="Pocetna.html";
+        }
     }
 }
 
