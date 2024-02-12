@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Data</title>
+</head>
+<body>
+    <div class="tab-content pt-4">
+        <div>Filter Data</div>
+        <input type="text" id="Filter" placeholder="Search">
+        <!-- Medical Records Tab -->
+        <div class="card card-table mb-0">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Description</th>
+                                <th>Attachment</th>
+                                <th>Diagnosis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="row1">
+                                <td>ID-205</td>
+                                <td>Inflammatory throat process</td>
+                                <td><a href="Nalaz.pdf">Document</a></td>
+                                <td>Sore throat</td>
+                            </tr>
+                            <tr id="row2">
+                                <td>ID-206</td>
+                                <td>Cold and cough</td>
+                                <td><a href="Nalaz.pdf">Document</a></td>
+                                <td>Runny nose and cough</td>
+                            </tr>
+                            <!-- Add other rows here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- /Medical Records Tab -->
+    </div>
+
+    <script>
+        // Get the filter input element
+        var filterInput = document.getElementById('Filter');
+
+        // Add event listener to filter input
+        filterInput.addEventListener('input', function () {
+            // Get the filter value
+            var filterValue = this.value.toLowerCase();
+
+            // Get all table rows
+            var rows = document.querySelectorAll('.table tbody tr');
+
+            // Loop through each row
+            rows.forEach(function (row) {
+                // Get the content of the second column (Description) by ID
+                var description = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+
+                // Check if the filter value is contained in the description
+                if (description.includes(filterValue)) {
+                    row.style.display = ''; // Show the row
+                } else {
+                    row.style.display = 'none'; // Hide the row
+                }
+            });
+        });
+    </script>
+</body>
+</html>
