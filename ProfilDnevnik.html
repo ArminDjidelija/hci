@@ -174,7 +174,7 @@
                                                 <div class="col-12 col-md-12">
                                                     <div class="form-group" style="margin-top: 4.5%;">
                                                         <button type="button" class="btn btn-primary"
-                                                            id="saveButton">Sacuvaj</button>
+                                                            id="saveButton" onclick="infoDetaljiHelp1()">Sacuvaj</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -196,7 +196,15 @@
 
     </section>
 
-    
+    <div class="popup" id="popupInfo1" style="z-index: 10000;">
+        <div class="close-btn" onclick="ugasiPopup1()">&times;</div>
+        <div class="form">
+          <h2>Informacija</h2>
+          <p style="width: 100%;margin: auto;text-align: center; ">
+            Uspješno ste pohranili podatke
+          </p>
+        </div>
+      </div>
 
     <!-- ======= Footer ======= -->
     <footer>
@@ -236,6 +244,7 @@
     <!-- Bootstrap Core JS -->
 
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/armin.js"></script>
 
     <script>
         // var trenutno = 0;

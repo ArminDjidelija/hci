@@ -751,6 +751,24 @@ var trenutno=0;
 // Function to update form data based on selected date
 function updateFormData() {
   var nizDana = {
+    "2024-02-05": {
+    height: 180,
+    weight: 94.2,
+    BMI: 22,
+    bloodPressure: "116/76"
+  },
+  "2024-02-06": {
+    height: 180,
+    weight: 94.2,
+    BMI: 22,
+    bloodPressure: "128/88"
+  },
+  "2024-02-07": {
+    height: 179.9,
+    weight: 94.3,
+    BMI: 22,
+    bloodPressure: "124/84"
+  },
     "2024-02-08": {
       height: 180,
       weight: 94.6,
