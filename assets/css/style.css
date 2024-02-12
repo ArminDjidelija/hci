@@ -565,7 +565,7 @@ section {
   position: relative;
   color: #2c4964;
 }
-
+/* 
 .section-title h2::before {
   content: "";
   position: absolute;
@@ -587,10 +587,10 @@ section {
   bottom: 0;
   left: calc(50% - 20px);
 }
-
+*/
 .section-title p {
   margin-bottom: 0;
-}
+} 
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -1928,7 +1928,19 @@ body {
   font-size: large;
   width: 200px;
 }
-
+#datumTermina2 {
+  height: 30px;
+  font-size: large;
+  text-align: center;
+  width: 150px;
+}
+.carousel-controls button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 0 10px;
+  cursor: pointer;
+}
 .optionTime {
   font-size: large;
 }
