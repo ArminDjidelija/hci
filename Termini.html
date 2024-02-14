@@ -32,8 +32,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/armin.css" rel="stylesheet">
 
- 
+
 </head>
 
 <body>
@@ -64,7 +65,8 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto" href="Pocetna.html">Pocetna</a></li>
-          <li class="dropdown nav-link scrollto active"><a href=""><span>Termini</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown nav-link scrollto active"><a href=""><span>Termini</span> <i
+                class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/RezervacijaTermina1.html">Rezervacija</a></li>
               <li><a href="/Termini.html">Pregled</a></li>
@@ -91,133 +93,206 @@
       </div>
     </div>
 
-    
-  <!-- Page Content -->
-  <div class="content" style="margin-left: 20%;">
-    <div class="container-fluid">
 
-      <div class="row">
-        <div class="col-md-7 col-lg-8 col-xl-9">
-          <div class="card">
-            <div class="card-body pt-0">
-            
-              <!-- Tab Menu -->
-              <nav  class="user-tabs mb-4">
-                <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#trenutni_termin" data-toggle="tab">Trenutni termini</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="#bivsi_termin" data-toggle="tab">Prosli termini</a>
-                  </li>
+    <!-- Page Content -->
+    <div class="content" style="margin-left: 20%;">
+      <div class="container-fluid">
 
-                </ul>
-              </nav>
-              <!-- /Tab Menu -->
-              
-              <!-- Tab Content -->
-              <div class="tab-content pt-0">
-                
-                <!-- Trenutni termiini -->
-                <div id="trenutni_termin" class="tab-pane fade show active">
-                  <div class="card card-table mb-0">
-                    <div class="card-body">
-                      <div class="table-responsive">
-                        <table class="table table-hover table-center mb-0">
-                          <thead>
-                            <tr>
-                              <th>Datum termina</th>
-                              <th>Vrijeme termina</th>
-                              <th>Tip pregleda</th>
-                              <th>Hitnost</th>
-                              <th>Informacije</th>
-                            </tr>
-                          </thead>
-                          <tbody id="tableContainer">
-                            <tr>
-                              <td>6 Dec 2023 <span class="d-block text-info"></span></td>
-                              <td>10.00 AM</td>
-                              <td>Prvi pregled</td>
-                              <td>Da</td>
-                              <td>Info</td>
-                            </tr>
-                            <tr>
-                              <td>22 Dec 2023 <span class="d-block text-info"></span></td>
-                              <td>11.30 AM</td>
-                              <td>Kontrola</td>
-                              <td>Ne</td>
-                              <td>Info</td>
-                            </tr>
-                            <tr>
-                              <td>6 Jan 2024 <span class="d-block text-info"></span></td>
-                              <td>12.00 AM</td>
-                              <td>Kontrola</td>
-                              <td>Da</td>
-                              <td>Info</td>
-                            </tr>
-                          </tbody>
-                        </table>
+        <div class="row">
+          <div class="col-md-7 col-lg-8 col-xl-9">
+            <div class="card">
+              <div class="card-body pt-0">
+
+                <!-- Tab Menu -->
+                <nav class="user-tabs mb-4">
+                  <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#trenutni_termin" data-toggle="tab">Trenutni termini</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#bivsi_termin" data-toggle="tab">Prosli termini</a>
+                    </li>
+
+                  </ul>
+                </nav>
+                <!-- /Tab Menu -->
+
+                <!-- Tab Content -->
+                <div class="tab-content pt-0">
+
+                  <!-- Trenutni termiini -->
+                  <div id="trenutni_termin" class="tab-pane fade show active">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table table-hover table-center mb-0">
+                            <thead>
+                              <tr>
+                                <th>Datum termina</th>
+                                <th>Vrijeme termina</th>
+                                <th>Tip pregleda</th>
+                                <th>Hitnost</th>
+                                <th>Informacije</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tableContainer">
+                              <tr>
+                                <td>18 Feb 2024 <span class="d-block text-info"></span></td>
+                                <td>10.00 AM</td>
+                                <td>Prvi pregled</td>
+                                <td>Ne</td>
+                                <td><button onclick="upaliInfo1()" class="plavi-button">Info</button></td>
+                              </tr>
+                              <tr>
+                                <td>22 Dec 2023 <span class="d-block text-info"></span></td>
+                                <td>11.30 AM</td>
+                                <td>Kontrola</td>
+                                <td>Ne</td>
+                                <td><button class="plavi-button">Info</button></td>
+                              </tr>
+                              <tr>
+                                <td>6 Jan 2024 <span class="d-block text-info"></span></td>
+                                <td>12.00 AM</td>
+                                <td>Kontrola</td>
+                                <td>Da</td>
+                                <td><button class="plavi-button">Info</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <!-- /Trenutni termini Tab -->
-                
-                <!-- Prosli termini -->
-                <div class="tab-pane fade" id="bivsi_termin">
-                  <div class="card card-table mb-0">
-                    <div class="card-body">
-                      <div class="table-responsive">
-                        <table class="table table-hover table-center mb-0">
-                          <thead>
-                            <tr>
-                              <th>Datum termina</th>
-                              <th>Vrijeme termina</th>
-                              <th>Tip pregleda</th>
-                              <th>Hitnost</th>
-                              <th>Informacije</th>
-                            </tr>    
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>11 Sept 2022 <span class="d-block text-info"></span></td>
-                              <td>10.00 AM</td>
-                              <td>Kontrola</td>
-                              <td>Ne</td>
-                              <td>Info</td>
-                            </tr>
-                            <tr>
-                              <td>10 Oct 2023 <span class="d-block text-info"></span></td>
-                              <td>10.00 AM</td>
-                              <td>Kontrola</td>
-                              <td>Ne</td>
-                              <td>Info</td>
-                            </tr>
+                  <!-- /Trenutni termini Tab -->
 
-                          </tbody>
-                        </table>
+                  <!-- Prosli termini -->
+                  <div class="tab-pane fade" id="bivsi_termin">
+                    <div class="card card-table mb-0">
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table table-hover table-center mb-0">
+                            <thead>
+                              <tr>
+                                <th>Datum termina</th>
+                                <th>Vrijeme termina</th>
+                                <th>Tip pregleda</th>
+                                <th>Hitnost</th>
+                                <th>Informacije</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>11 Sept 2022 <span class="d-block text-info"></span></td>
+                                <td>10.00 AM</td>
+                                <td>Kontrola</td>
+                                <td>Ne</td>
+                                <td><button onclick="upaliInfo2()" class="plavi-button">Info</button></td>
+                              </tr>
+                              <tr>
+                                <td>10 Oct 2023 <span class="d-block text-info"></span></td>
+                                <td>10.00 AM</td>
+                                <td>Kontrola</td>
+                                <td>Ne</td>
+                                <td><button onclick="upaliInfo2()" class="plavi-button">Info</button></td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <!-- /Prosli termini Tab -->
+
+
                 </div>
-                <!-- /Prosli termini Tab -->
-                  
-                
+                <!-- Tab Content -->
+
               </div>
-              <!-- Tab Content -->
-              
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
+    <!-- /Page Content -->
 
-  </div>		
-  <!-- /Page Content -->
+    <div class="popup" id="popupInfoTermin1">
+      <div class="close-btn" onclick="ugasiInfo1()">&times;</div>
+      <div class="form">
+        <h4>Detalji o rezervaciji</h4>
+        <div class="form-element">
+          <label for="email" style="font-size: small;">Naslov</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Bol u koljenu</p>
+          <!-- <input type="text" style="font-size: small;" placeholder="Bol u koljenu"> -->
+        </div>
+        <div class="form-element">
+          <label for="email" style="font-size: small;">Opis</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Osjećam oštru bol u desnom
+            koljenu svaki put kad pokušam saviti ili opteretiti nogu. Bol se javlja s vremena na vrijeme, ali postaje
+            intenzivnija kada pokušavam hodati ili se penjati stepenicama. Primijetio/la sam da je bol počela prije
+            nekoliko sedmica i postaje sve češća. Nema posebnog okidača koji bih mogao/la identificirati, ali osjećam
+            nelagodu čak i kad mirujem. Molim vas za pregled i savjet kako dalje postupiti.</p>
 
-  </section> 
+          <!-- <textarea type="text" rows="5" style="font-size: small;"
+          placeholder="Bol u koljenu prilikom savijanja noge i tokom hodanja"></textarea> -->
+        </div>
+        <!-- <div class="form-element">
+          <label for="email" style="font-size: small;">Zadnja dijagnoza pacijenta</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Pacijent osjeća bol u
+            prednjem dijelu koljena, što sugerira patelofemoralni sindrom. Tijekom pregleda primijetio sam povećan
+            pritisak između patele i femura. Preporučujem fizikalnu terapiju za jačanje mišića oko koljena i nošenje
+            ortopedskih uložaka za podršku pravilnoj poravnanosti patele. Ako simptomi ne poboljšaju, razmotrit ćemo
+            daljnje opcije liječenja, uključujući hirurške zahvate. Molim pacijenta da prati preporuke za terapiju i
+            redovno se javlja.</p>
+
+
+         
+        </div> -->
+      </div>
+    </div>
+
+    <div class="popup" id="popupInfoTermin2">
+      <div class="close-btn" onclick="ugasiInfo2()">&times;</div>
+      <div class="form">
+        <h4>Detalji o dijagnozi</h4>
+        <div class="form-element">
+          <label for="email" style="font-size: small;">Naslov</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Hronični kašalj</p>
+          <!-- <input type="text" style="font-size: small;" placeholder="Bol u koljenu"> -->
+        </div>
+        <!-- <div class="form-element">
+          <label for="email" style="font-size: small;">Opis</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Osjećam oštru bol u desnom
+            koljenu svaki put kad pokušam saviti ili opteretiti nogu. Bol se javlja s vremena na vrijeme, ali postaje
+            intenzivnija kada pokušavam hodati ili se penjati stepenicama. Primijetio/la sam da je bol počela prije
+            nekoliko sedmica i postaje sve češća. Nema posebnog okidača koji bih mogao/la identificirati, ali osjećam
+            nelagodu čak i kad mirujem. Molim vas za pregled i savjet kako dalje postupiti.</p>
+
+          <textarea type="text" rows="5" style="font-size: small;"
+          placeholder="Bol u koljenu prilikom savijanja noge i tokom hodanja"></textarea>
+        </div> -->
+        <div class="form-element">
+          <label for="email" style="font-size: small;">Dijagnoza pacijenta</label>
+          <p style="font-size: small;border: 1px solid black;padding: 7px;padding-left: 3px;">Pacijent se konzultirao
+            zbog dugotrajnog kašlja koji traje više od osam sedmica, a unatoč prethodnim analizama, uzrok kašlja ostaje
+            nepoznat. Tijekom kliničkog pregleda nisu uočene očite infekcije dišnih puteva ili druge ozbiljne
+            patologije. Preporučujem dodatne dijagnostičke testove, uključujući laboratorijske pretrage, slikovne
+            preglede i potencijalno konzultacije s pulmologom, kako bismo utvrdili specifične faktore ili stanja koja
+            mogu doprinijeti ovom hroničnom simptomu kašlja. Nadalje, pratit ćemo pacijentovo stanje, razmotriti
+            eventualne izloženosti iritantima i pratiti dinamiku simptoma kako bismo pravilno usmjerili daljnje korake u
+            dijagnostičkom procesu.</p>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
 
 
   <!-- ======= Footer ======= -->
@@ -226,7 +301,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy;  <strong><span>eBolnica</span></strong>2023
+          &copy; <strong><span>eBolnica</span></strong>2023
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -247,17 +322,18 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
-    <script src="assets/js/dodatneFunkcije.js"></script>
+  <script src="assets/js/dodatneFunkcije.js"></script>
+  <script src="assets/js/armin.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 
-  		<!-- jQuery -->
-      <script src="assets/js/jquery.min.js"></script>
-		
-      <!-- Bootstrap Core JS -->
+  <!-- jQuery -->
+  <script src="assets/js/jquery.min.js"></script>
 
-      <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Core JS -->
+
+  <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

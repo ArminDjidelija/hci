@@ -129,14 +129,26 @@ function dodajPacijentaApotekar() {
 
           </tr>
         `;
+        document.getElementById("pogresanId").style.display="none";
+
+    }
+    else if(document.getElementById("idPacijenta").value === "1234"){
+        document.getElementById("pogresanId").style.display="block";
     }
     else {
-        document.getElementById("prviRed").style.opacity = 0;
+        //document.getElementById("prviRed").style.opacity = 0;
         document.getElementById("imePrezime").style.display = "none";
     }
 
 }
-
+function infoDetalji() {
+    document.getElementById("popupInfo").style.display = "block";
+    document.getElementById("pregledi").style.opacity = "0.2";
+    document.getElementById("header").style.opacity = "0";
+    document.getElementById("header").style.display = "none";
+  
+    document.getElementById("popupInfo").style.opacity = "1";
+  }
 function potvrdiKupovinu() {
     infoDetalji();
     document.getElementById("tbodyId").innerHTML = `
@@ -148,7 +160,7 @@ function potvrdiKupovinu() {
             </td>
             <td class="align-middle">Dr. Adnan Humačkić</td>
             <td class="align-middle">12.02.2024.</td>
-            <td class="align-middle">Ne</td>
+            <td class="align-middle">Da</td>
             <td id="show-login" class="align-middle">
             
              
@@ -225,8 +237,39 @@ function upaliPrompt(){
     // document.getElementById("header").style.opacity = "0";
     // document.getElementById("header").style.display = "none";
   
-    document.getElementById("popupInfo3").style.opacity = "1";}
+    document.getElementById("popupInfo3").style.opacity = "1";
+}
+
 function ugasiPopup3(){
     document.getElementById("popupInfo3").style.display="none";
 }
 
+function upaliInfo1(){
+    document.getElementById("popupInfoTermin1").style.display="block";
+    document.getElementById("header").style.display="none";
+    document.getElementById("popupInfoTermin1").style.opacity = "1";
+
+}
+
+function ugasiInfo1(){
+    document.getElementById("popupInfoTermin1").style.display="none";
+    document.getElementById("popupInfoTermin1").style.opacity = "0";
+    document.getElementById("header").style.display="block";
+
+
+}
+
+function upaliInfo2(){
+    document.getElementById("popupInfoTermin2").style.display="block";
+    document.getElementById("header").style.display="none";
+    document.getElementById("popupInfoTermin2").style.opacity = "1";
+
+}
+
+function ugasiInfo2(){
+    document.getElementById("popupInfoTermin2").style.display="none";
+    document.getElementById("popupInfoTermin2").style.opacity = "0";
+    document.getElementById("header").style.display="block";
+
+
+}

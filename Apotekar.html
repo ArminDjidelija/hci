@@ -128,7 +128,8 @@
 
 
       <h2 style="text-align: center;" id="nemaPodataka">Nema podataka</h2>
-
+      <h2 style="text-align: center; color: red;display: none;" id="pogresanId" >Pogrešan id!</h2>
+      
 
 
       <div class="popup" id="popupInfo" style="width: 40%;">
@@ -139,7 +140,7 @@
             <a><button type="submit" id="btnDetalji" class="nextBackButton"
                 style="padding-bottom: 2px;padding-top: 2px; background-color: white; color: blue; border: 1px solid rgba(0, 0, 255, 0.507);" onclick="ugasiPopup()">Poništi</button></a>
                 <a><button type="submit" id="btnDetalji" class="nextBackButton"
-                  style="padding-bottom: 2px;padding-top: 2px;border: 2px solid rgba(0, 0, 255,1); " onclick="ugasiPopup()">Potvrdi</button></a>
+                  style="padding-bottom: 2px;padding-top: 2px;border: 2px solid rgba(0, 0, 255,1); " onclick="potvrdiKupovinu();ugasiPopup();">Potvrdi</button></a>
           </div>
         <!-- <div class="form">
           <h4>Detalji o dijagnozi (<a href="">Ime prezime</a>)</h4>
@@ -251,7 +252,6 @@
 
   <!-- Datetimepicker JS -->
   <script src="assets/js/moment.min.js"></script>
-  <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 
   <!-- Full Calendar JS -->
   <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
@@ -268,7 +268,9 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/dodatneFunkcije.js"></script>
+
+  <!-- <script src="assets/js/dodatneFunkcije.js"></script> -->
+
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <!-- <script src="assets/js/dodatneFunkcije.js"></script> -->
   <!-- Template Main JS File -->

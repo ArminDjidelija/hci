@@ -2092,7 +2092,7 @@ body {
   left: 50%;
   transform:translate(-50%, -50%);
 }
-#popupInfo, #dijagnozaInfo, #popupInfo1, #popupInfo2, #popupInfo3{
+#popupInfo, #dijagnozaInfo, #popupInfo1, #popupInfo2, #popupInfo3, #popupInfoTermin1, #popupInfoTermin2{
   display: none;
   position: fixed;
   top: 47%;
